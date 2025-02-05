@@ -218,6 +218,116 @@
 <section class="section">
   <div class="container is-max-desktop">
 
+    
+    <div class="columns is-centered">
+      <!-- Visual Effects. -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Experiments</h2>
+            <h2>Few-Shot Learning Evaluations</h2>
+            <p>The model was evaluated on the <strong>JetClass</strong> dataset, where it consistently outperformed models trained from scratch, particularly in low-label regimes:</p>
+              <ul>
+                <li>Two regimes, frozen (pretrained backbone not updated) and fine-tuned were evaluated</li>
+                <li>Evaluated at label fractions: 0.05%, 0.5%, 2%, 10%, and 100%</li>
+                <li>Compared pre-trained HEP-JEPA model with model trained from scratch</li>
+              </ul>
+
+            <h3>Downstream Task Evaluations</h3>
+            <p>The model was tested on two critical tasks:</p>
+            <ul>
+                <li><strong>Top tagging</strong> using the <em>TQTR</em> dataset</li>
+                <li><strong>Quark-gluon jet differentiation</strong> using the <em>quark-gluon tagging</em> dataset</li>
+            </ul>
+
+            <h3>Ablation Studies</h3>
+            <p>The study explored various design choices, including:</p>
+            <ul>
+                <li>Masking strategies (<strong>random vs. contiguous</strong> token selection)</li>
+                <li>Number of target tokens to predict</li>
+                <li>Physics bias in the attention mechanism</li>
+                <li>Integration of <strong>register tokens</strong></li>
+                <li>Impact of <strong>physics-inspired data augmentations</strong></li>
+            </ul>
+
+        </div>
+      </div>
+      <!--/ Visual Effects. -->
+
+      <!-- Results. -->
+      <div class="column">
+        <h2 class="title is-3">Results and Findings</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <h3>Key Findings</h3>
+            <ul>
+                <li><span class="highlight">Physics bias</span> improved performance by approximately <strong>2%</strong></li>
+                <li><span class="highlight">Register tokens</span> increased performance by around <strong>2%</strong></li>
+                <li>The <strong>contiguous masking strategy</strong> with one target token performed best</li>
+                <li>Physics-inspired augmentations did not significantly improve performance</li>
+            </ul>
+
+            <h3>JetClass Metrics</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>% of Labels (Size)</th>
+                        <th>Model</th>
+                        <th>Accuracy</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="2">0.05% (5K)</td>
+                        <td>From Scratch</td>
+                        <td>0.505</td>
+                    </tr>
+                    <tr>
+                        <td>HEP-JEPA, Fine-Tuning</td>
+                        <td>0.564</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">0.5% (50K)</td>
+                        <td>From Scratch</td>
+                        <td>0.586</td>
+                    </tr>
+                    <tr>
+                        <td>HEP-JEPA, Fine-Tuning</td>
+                        <td>0.624</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">2% (2M)</td>
+                        <td>From Scratch</td>
+                        <td>0.668</td>
+                    </tr>
+                    <tr>
+                        <td>HEP-JEPA, Fine-Tuning</td>
+                        <td>0.669</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">10% (10M)</td>
+                        <td>From Scratch</td>
+                        <td>0.683</td>
+                    </tr>
+                    <tr>
+                        <td>HEP-JEPA, Fine-Tuning</td>
+                        <td>0.685</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">100% (100M)</td>
+                        <td>From Scratch</td>
+                        <td>0.698</td>
+                    </tr>
+                    <tr>
+                        <td>HEP-JEPA, Fine-Tuning</td>
+                        <td>0.698</td>
+                    </tr>
+                </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Concurrent Work. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
