@@ -22,6 +22,7 @@
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Inter&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
@@ -90,7 +91,7 @@
             predictive architecture</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://in.linkedin.com/in/jai-bardhan">Jai Bardhan</a><sup>1</sup>,</span>
+              <a href="https://jaibardhan.com/">Jai Bardhan</a><sup>1</sup>,</span>
             <span class="author-block">
               <a href="https://in.linkedin.com/in/radhikeshagrawal">Radhikesh Agrawal</a><sup>2</sup>,</span>
             <span class="author-block">
@@ -157,8 +158,11 @@
   </div>
 </section>
 
+<hr style="border: none; height: 2px; box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.5); margin: 20px 0;">
+
+
 <section class="section">
-  <div class="container is-max-desktop">
+  <div class="container is-max-desktop content box">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -196,7 +200,7 @@
         <br>
         <img src="./static/images/jepa_schematic_combined.svg"
              class="interpolation-image"
-             alt="Interpolate start reference image."/>
+             alt="Schematic Diagram for HEP-JEPA"/>
         <br>
         <br>
       </div>
@@ -214,17 +218,17 @@
   </div>
 </section>
 
-
 <section class="section">
   <div class="container is-max-desktop">
-
-    
-    <div class="columns is-centered">
-      <!-- Visual Effects. -->
+    <div 
+      class="columns is-centered content box"
+      style="border-radius: 12px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);"
+    >
+      <!-- Experiments -->
       <div class="column">
         <div class="content">
           <h2 class="title is-3">Experiments</h2>
-            <h2>Few-Shot Learning Evaluations</h2>
+            <h3>Few-Shot Learning Evaluations</h3>
             <p>The model was evaluated on the <strong>JetClass</strong> dataset, where it consistently outperformed models trained from scratch, particularly in low-label regimes:</p>
               <ul>
                 <li>Two regimes, frozen (pretrained backbone not updated) and fine-tuned were evaluated</li>
@@ -251,7 +255,6 @@
 
         </div>
       </div>
-      <!--/ Visual Effects. -->
 
       <!-- Results. -->
       <div class="column">
@@ -328,6 +331,74 @@
       </div>
     </div>
 
+    <hr style="border: none; height: 2px; box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.5); margin: 20px 0;">
+
+
+    <div class="columns is-centered">
+      <div class="column">
+        <div 
+          class="content box has-background-white-ter p-5"
+          style="border-radius: 12px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);"
+        >
+          <h2 class="title is-3">Validation Loss Performance</h2>
+          <p>
+            Validation loss vs. training step for the two benchmark
+            odels training in a few-shot learning setting for jet classification
+            n the JetClass dataset with 0.5% labels (i.e., 50000 training sam-
+            les). One model is trained from scratch, whereas the pre-trained
+            EP-JEPA model is fine-tuned.
+          </p>
+          <div class="is-flex is-justify-content-center">
+            <img 
+              src="./static/images/val_50k.svg" 
+              alt="Validation loss vs. Training step"
+              style="width: 80%;"
+            />
+          </div>
+          <p style="margin-top: 20px">
+            The validation loss falls quickly
+            or the HEP-JEPA model — it achieves the same minimum valida-
+            ion loss as the model trained from scratch three times faster
+          </p>
+        </div>
+      </div>
+
+      <!-- Results. -->
+      <div class="column">
+        <div 
+          class="content box has-background-white-ter p-5"
+          style="border-radius: 12px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);"
+        >
+          <h2 class="title is-3">Visualization</h2>
+          <p>
+            We visualise the representation learned by HEP-JEPA on
+            50k samples of JetClass sampled uniformly from each class.
+            We construct the embedding for a sample by concatenating
+            the max and mean pooling of the outputs of the context
+            encoder and apply t-SNE on the pooled embedding.
+          </p>
+          <div class="is-flex is-justify-content-center">
+            <img 
+              src="./static/images/tsne.png" 
+              alt="Validation loss vs. Training step"
+              style="width: 80%; border-radius: 8px;"
+            />
+          </div>
+          <p>
+            We observe that events that
+            contain lepton(s) are pushed to the right, while hadronic
+            events are more towards the left.
+          </p>
+
+
+        </div>
+      </div>
+    </div>
+
+
+    <hr style="border: none; height: 2px; box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.5); margin: 20px 0;">
+
+
     <!-- Concurrent Work. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
@@ -351,6 +422,7 @@
   </div>
 </section>
 
+<hr style="border: none; height: 2px; box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.5); margin: 20px 0;">
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
@@ -367,6 +439,7 @@
 
 
 <footer class="footer">
+  
   <div class="container">
     <div class="content has-text-centered">
       <a class="icon-link"
@@ -396,6 +469,7 @@
       </div>
     </div>
   </div>
+
 </footer>
 
 </body>

@@ -1,7 +1,3 @@
-body {
-  font-family: 'Noto Sans', sans-serif;
-}
-
 .container-flex {
     margin: 25px 50px 75px 100px;
     display: flex;
@@ -219,4 +215,10 @@ tr:hover {
 }
 #interpolation-image-wrapper img {
   border-radius: 5px;
+}
+
+body {
+    font-family: 'Merriweather', serif;  /* Or any other font from the list */
+    font-size: 18px;
+    line-height: 1.6;
 }
