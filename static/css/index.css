@@ -2,17 +2,16 @@ body {
   font-family: 'Noto Sans', sans-serif;
 }
 
-
-.footer .icon-link {
-    font-size: 25px;
-    color: #000;
-}
-
 .container-flex {
     margin: 25px 50px 75px 100px;
     display: flex;
     align-items: center;
     gap: 120px;
+}
+
+.footer .icon-link {
+    font-size: 25px;
+    color: #000;
 }
 
 .image-container {
@@ -21,6 +20,21 @@ body {
 
 .text-container {
     flex: 1;
+}
+
+/* Responsive design: Stack elements vertically on smaller screens */
+@media (max-width: 1200px) {
+    .container-flex {
+        flex-direction: column; /* Stack elements */
+        margin: 20px; /* Reduce margins */
+        gap: 20px; /* Reduce spacing */
+        text-align: center; /* Center text */
+    }
+
+    .image-container img {
+        max-width: 100%; /* Make image responsive */
+        height: auto;
+    }
 }
 
 .link-block a {
