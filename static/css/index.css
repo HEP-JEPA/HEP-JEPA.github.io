@@ -8,9 +8,32 @@ body {
     color: #000;
 }
 
+.container-flex {
+    margin: 25px 50px 75px 100px;
+    display: flex;
+    align-items: center;
+    gap: 120px;
+}
+
+.image-container {
+    flex: 1;
+}
+
+.text-container {
+    flex: 1;
+}
+
 .link-block a {
     margin-top: 5px;
     margin-bottom: 5px;
+}
+
+.is-greyed-out {
+    background-color: #b5b5b5 !important;
+    border-color: #b5b5b5 !important;
+    color: #ffffff !important;
+    opacity: 0.6;
+    pointer-events: none;
 }
 
 .dnerf {
