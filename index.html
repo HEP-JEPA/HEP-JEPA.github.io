@@ -106,7 +106,7 @@
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block">International Instituite of Information Technology</span>
+            <span class="author-block">International Institute of Information Technology</span>
           </div>
           <div class="is-size-6 publication-authors">
             <span class="author-block">*Equal Contributions</span>
@@ -175,11 +175,7 @@
             We present a transformer architecture-based foundation model 
             for tasks at high-energy particle colliders such as the Large 
             Hadron Collider. We train the model to classify jets using a self-supervised
-            strategy inspired by the <a href="https://ai.meta.com/blog/yann-lecun-ai-model-i-jepa/">Joint Embedding Predictive Architecture </a>.
-          </p>
-
-          <p>
-            We use the <a href="https://zenodo.org/records/6619768">JetClass dataset</a> containing
+            strategy inspired by the <a href="https://ai.meta.com/blog/yann-lecun-ai-model-i-jepa/">Joint Embedding Predictive Architecture </a>. We use the <a href="https://zenodo.org/records/6619768">JetClass dataset</a> containing
             100M jets of various known particles to pre-train the model with a data-centric approach — the
             model uses a fraction of the jet constituents as the context to predict the embeddings of the unseen
             target constituents. Our pre-trained model fares well with other datasets for standard classification 
@@ -410,13 +406,15 @@
         <div class="content has-text-justified">
           <p>Several recent works have explored foundation models and self-supervised learning in high-energy physics (HEP).</p>  
 
-          <p><a href="https://arxiv.org/abs/2404.16091">OmniLearn</a> and <a href="https://arxiv.org/abs/2202.03772">Particle Transformer</a> use transformer-based architectures for HEP tasks, relying on supervised learning with simulated data.</p>  
+          <p><a href="https://arxiv.org/abs/2404.16091">OmniLearn</a> and <a href="https://arxiv.org/abs/2202.03772">Particle Transformer</a> use transformer-based architectures for HEP tasks, relying on supervised learning with simulated data and generative modelling.</p>  
 
           <p><a href="https://arxiv.org/abs/2401.13537">Masked Particle Modelling (MPM)</a> and <a href="https://arxiv.org/abs/2403.05618">OmniJet-α</a> adapt masked modeling and generative pre-training from natural language processing to collider physics.</p>  
 
+          <p>Concurrent to our work, <a href="https://arxiv.org/abs/2412.05333">J-JEPA</a> adapts the JEPA paradigm for the task of top tagging — the authors pre-train the model on 1% of the top jet and light jet samples from JetClass and evaluate downstream performance on the Top Tagging Reference dataset. However, unlike our data-centric approach, the authors generate context / target tokens through clustering subjets. We also show more comprehensive evaluations on the entire JetClass dataset with downstream applications.</p>
+
           <p>Contrastive learning methods, such as those in <a href="https://arxiv.org/abs/2108.04253">Dillon et al. (2022)</a>, follow frameworks like <a href="https://arxiv.org/abs/2002.05709">SimCLR</a>, but require carefully selected negative samples. In contrast, <a href="https://arxiv.org/abs/2301.08243">Joint Embedding Predictive Architectures (JEPA)</a> have shown promising results in images, videos, and point clouds by learning in latent space without a decoder.</p>  
 
-          <p>For an extensive survey on foundation models in HEP, see <a href="https://indico.in2p3.fr/event/33412/contributions/143801/attachments/87125/131479/Foundation_models_for_HEP_Anna_Hallin.pdf">this</a>.</p>
+          <p>For an extensive survey on foundation models in HEP, see <a href="https://indico.in2p3.fr/event/33412/contributions/143801/attachments/87125/131479/Foundation_models_for_HEP_Anna_Hallin.pdf">this</a> and <a href="https://iml-wg.github.io/HEPML-LivingReview/#foundation-models-llms">this</a>.</p>
         </div>
       </div>
     </div>
@@ -432,7 +430,7 @@
     <h2 class="title">Sponsors</h2>
     <div class="content has-text-justified">
       <p>We are looking for sponsors and collaborators! </p>
-      <p> If you would like to sponsor or collaborate on future iterations of this work please reach out to <a href="mailto:subhadip.mitra@iiit.ac.in">subhadip.mitra@iiit.ac.in</a> or <a href="mailto:jai.bardhan@alumni.iiit.ac.in">jai.bardhan@alumni.iiit.ac.in.</a></p>
+      <p> If you would like to sponsor or collaborate on future iterations of this work (or other works from our lab) please reach out to subhadip.mitra&lt;AT&gt;iiit.ac.in or jai.bardhan&lt;AT&gt;alumni.iiit.ac.in</p>
     </div>
   </div>
 </section>
